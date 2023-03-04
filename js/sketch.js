@@ -7,16 +7,17 @@ let dx; // Value for incrementing x
 let yvalues; // Using an array to store height values for the wave
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(1390, 675);
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new Array(floor(w / xspacing));
 }
 
 function draw() {
-  background(0);
+  background(0,105,148);
   calcWave();
   renderWave(987);
+
 }
 
 function calcWave() {
@@ -33,8 +34,9 @@ function calcWave() {
 }
 
 function renderWave() {
-  noStroke();
-  fill(255,50);
+  stroke(50,20,20);
+  strokeWeight(2,4);
+  fill(0,128,0);
   // A simple way to draw the wave with an ellipse at each location
   for (let x = 0; x < yvalues.length; x++) {
     ellipse(x * xspacing, height / 2 + yvalues[x], 160, 60);
