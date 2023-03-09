@@ -1,7 +1,7 @@
 html,
 body {
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
+  padding:1px;
    background:linear-gradient(to bottom, #00ff00 0%, #663300 100%);
 }
 canvas {
