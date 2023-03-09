@@ -7,7 +7,7 @@ let dx; // Value for incrementing x
 let yvalues; // Using an array to store height values for the wave
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(1390, 675);
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new Array(floor(w / xspacing));
@@ -22,7 +22,7 @@ function draw() {
 function calcWave() {
   // Increment theta (try different values for
   // 'angular velocity' here)
-  theta += 0.06;
+  theta += 0.02;
 
   // For every x value, calculate a y value with sine function
   let x = theta;
@@ -33,11 +33,14 @@ function calcWave() {
 }
 
 function renderWave() {
-  noStroke();
-  fill(255,50);
+  strokeWeight(6);
+  strokeWeight (1);
+  fill(235, 235, 235);
   // A simple way to draw the wave with an ellipse at each location
   for (let x = 0; x < yvalues.length; x++) {
-    ellipse(x * xspacing, height / 2 + yvalues[x], 160, 60);
+    ellipse(x * xspacing, height /2  + yvalues[x], 60, 60);
+    square(x * xspacing, height /2  + yvalues[x], 60, 60);
     
   }
 }
+
