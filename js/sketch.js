@@ -34,12 +34,14 @@ function calcWave() {
 }
 
 function renderWave() {
-  stroke(50,20,20);
-  strokeWeight(2,4);
+  stroke(91, 0, 0);
+  strokeWeight(3);
   fill(0,254,0);
   // A simple way to draw the wave with an ellipse at each location
   for (let x = 0; x < yvalues.length; x++) {
-    ellipse(x * xspacing, height / 2 + yvalues[x], 160, 60);
+    ellipse(x * xspacing, height / 2 + yvalues[x], 160, 75);
+    triangle(x *xspacing, height / 4 + yvalues[x], 2, 2,);
+    ellipse(x *xspacing, height / 1.2 + yvalues[x], 160, 15,);
     
   }
 }
