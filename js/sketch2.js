@@ -5,7 +5,11 @@ let amplitude = 75.0; // Height of wave
 let period = 500.0; // How many pixels before the wave repeats
 let dx; // Value for incrementing x
 let yvalues; // Using an array to store height values for the wave
+let img;
 
+function preload() {
+  img = loadImage('images/leaves3.png');
+}
 function setup() {
   createCanvas(1390, 675);
   w = width + 16;
@@ -14,7 +18,8 @@ function setup() {
 }
 
 function draw() {
-  background((255,255,255));
+  background((0,0,0,0));
+  image(img, 0, 0);
   calcWave();
   renderWave(987);
 }
