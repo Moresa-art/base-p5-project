@@ -42,7 +42,7 @@ function renderWave() {
     fill(244, 0, 0);
     rect(x * xspacing, height /2  + yvalues[x], 40, 20);
     fill(0, 198, 0);
-    
+    ellipse(x * xspacing, height /1  + yvalues[x], 6, 5);
     
   }
 }

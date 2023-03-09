@@ -41,7 +41,7 @@ function renderWave() {
   for (let x = 0; x < yvalues.length; x++) {
     ellipse(x * xspacing, height / 2 + yvalues[x], 160, 75);
     triangle(x *xspacing, height / 4 + yvalues[x], 2, 2,);
-    ellipse(x *xspacing, height / 1.2 + yvalues[x], 160, 15,);
+    ellipse(x *xspacing, height / 1.2 + yvalues[x], 160, 20,);
     
   }
 }
